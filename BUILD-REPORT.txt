@@ -1,0 +1,26 @@
+VillagerTrader 0.1.1+26.2 — compatibility build verification
+Target: Minecraft Java Edition EXACTLY 26.2 / Fabric / Java 25
+Build: Gradle 9.7.1, Loom 1.18.4, Loader 0.19.3, Fabric API 0.154.0+26.2
+Actual compileClasspath resolution verified by Gradle dependencyInsight for Loader and API.
+Changes: build dependencies and declared minima now match the user screenshot.
+No gameplay logic was changed in this compatibility release.
+Compilation: PASSED
+Automated tests: 13 passed, 0 failed, 0 skipped
+dev.villagertrader.DependencyMetadataTest: 3 tests, 0 failures
+dev.villagertrader.MerchantApiTest: 3 tests, 0 failures
+dev.villagertrader.TradeRulesTest: 7 tests, 0 failures
+Dependency tests use Fabric Loader VersionPredicate parsing against packaged metadata.
+JAR ZIP integrity, metadata, client entry point and Java bytecode version: PASSED
+Vanilla JOML emitted a deprecated sun.misc.Unsafe warning on Java 25.
+
+NOT VERIFIED: real game launch, rendered menus, live keyboard interaction,
+pathfinding in an actual world, server-side/plugin interoperability, multiplayer latency.
+The screenshot dependency rejection is covered; this is not a full in-game smoke test.
+Use a backed-up single-player test world first.
+
+INSTALL: Move villagertrader-0.1.0+26.2.jar OUT of mods, add this 0.1.1 jar.
+Keep the existing Fabric API 0.154.0+26.2. Do not keep two VillagerTrader jars.
+
+File: villagertrader-0.1.1+26.2.jar
+Bytes: 57506
+SHA-256: a7849dffacee8ffc280d5898e8a7d8bff4dc2fb0596a6f5b3514127cd244df3c
